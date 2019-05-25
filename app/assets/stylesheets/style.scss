@@ -1,0 +1,58 @@
+// indexページ
+.article{
+  width: 50%;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;  
+}
+
+.content{
+  color: black;
+  border: 2px solid black;
+  margin-top: 10px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.name{
+  float: right;
+}
+
+// 投稿画面
+.form{
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.form h3{
+  color: teal;
+}
+
+// submitボタン
+.button{
+  width: 250px;
+  height: 50px;
+  background-color:#00bfff;
+  color: white;
+}
+
+// 新規登録画面
+.signup-page{
+  width: 50%;
+  margin: 0 auto;
+}
+
+// ログイン画面
+.rogin-page{
+  width: 50%;
+  margin: 0 auto;
+}
+
+// 詳細画面
+.article-show{
+  width: 50%;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid black;
+}

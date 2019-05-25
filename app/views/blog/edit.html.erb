@@ -1,0 +1,25 @@
+<div class="form">
+  <%= form_tag("/blog/#{@article.id}", method: :patch ) do %>
+    <h3>
+      編集する
+    </h3>
+      <div class="row">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="title" type="text" class="validate" placeholder="<%= @article.title %>" name="title">
+              <label for="last_name">タイトル</label>
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" placeholder="<%= @article.text %>" name="text"></textarea>
+              <label for="textarea1">本文</label>
+            </div>
+          </div>
+      </div>
+      <input class="button" type="submit" value="SENT">
+  <% end %>
+</div>

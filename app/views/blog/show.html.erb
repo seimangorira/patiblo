@@ -1,0 +1,26 @@
+<div class="article-show">
+    <div class="content-show">
+      <%= simple_format(@article.text) %>
+      <span class="name">
+          投稿者:<%= @article.user.nickname %>
+      </span>
+    </div>
+    <% if user_signed_in? && current_user.id == @article.user_id %>
+      <%= link_to("/blog/#{@article.id}", method: :delete) do %>
+        <div class="waves-effect waves-light btn">
+          <i class="material-icons left">
+            delete 
+          </i>削除
+        </div>
+      <% end %>
+
+      <%= link_to("/blog/#{@article.id}/edit", method: :get) do %>
+        <div class="waves-effect waves-light btn">
+          <i class="material-icons left">
+            edit
+            </i>編集
+        </div>
+      <% end %>
+
+    <% end %>
+</div>
