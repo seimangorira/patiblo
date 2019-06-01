@@ -4,8 +4,9 @@
   </span>
 </div>
 <% if user_signed_in? && current_user.id == article.user_id %>
-  <%= link_to("/blog/#{article.id}", method: :delete) do %>
-    <div class="waves-effect waves-light btn alert1">
+
+  <%= link_to("/blog/#{article.id}", method: :delete, data: { confirm: "削除しますか？" }) do %>
+    <div class="waves-effect waves-light btn">
       <i class="material-icons left">
         delete 
       </i>削除

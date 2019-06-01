@@ -6,7 +6,7 @@
       </span>
     </div>
     <% if user_signed_in? && current_user.id == @article.user_id %>
-      <%= link_to("/blog/#{@article.id}", method: :delete) do %>
+      <%= link_to("/blog/#{@article.id}", method: :delete, data: { confim: "削除しますか？" }) do %>
         <div class="waves-effect waves-light btn">
           <i class="material-icons left">
             delete 

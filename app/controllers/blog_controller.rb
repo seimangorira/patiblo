@@ -1,8 +1,12 @@
 class BlogController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:top, :index, :show]
+
+  def top
+    render layout: false
+  end
 
   def index
-    @articles = Article.includes(:user).order("created_at desc").page(params[:page]).per(10)
+    @articles = Article.includes(:user).order("created_at desc").page(params[:page]).per(2)
   end
 
   def new
